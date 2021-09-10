@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+    <!--HEAD SECTION-->
+    <head>
+        <meta charset="UTF-8">
+        <title>News and Events - Action Sports Hawkes Bay</title>
+        <meta name="viewport" content="width=device-width, initial scale 1.0">
+        <link rel="stylesheet" type="text/css" href="CSS/style.css">
+        <link href="https://fonts.googleapis.com/css2?family=Oswald&display=swap" rel="stylesheet"> <!--Font Family - 'Oswald'-->
+        <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    </head>
+    <!--BODY SECTION-->
+    <body>
+        <!--Nav Bar-->
+        <div id="nav" class="overlay">
+            <div class="overlay_content">
+                <ul>
+                    <li><a href="index.html" class="page_link">Home</a></li>
+                    <li><a href="action-sports.html" class="page_link">Action Sports</a></li>
+                    <li><a href="local-information.html" class="page_link">Local Information</a></li>
+                    <li><a href="news-and-events.html" id="active_page" class="page_link">News and Events</a></li>
+                    <li><a href="gallery.html" class="page_link">Gallery</a></li>
+                    <li><a href="contact-information.html" class="page_link">Contact Us</a></li>
+                    <li><a href="references-authenticity.html" class="page_link">References</a></li>
+                </ul>
+                <button class="arrow up closebtn" onclick="closeNav()"></button>
+            </div>
+        </div>
+        <!--Header-->
+        <header class="header_container" id="news_header">
+            <button id = "nav_button" onclick="openNav()"><i class="material-icons" style="font-size: 50px;">menu</i></button>
+            <div class = "box_web_title">
+                <h1 class = "web_title">Action Sports - Hawke's Bay</h1>
+            </div>
+            <div class = "box_page_title">
+                <h1 class = "page_title">News and Events</h1>
+            </div>
+        </header>
+        <!--Main-->
+        <main class="news_page_container">
+            <h2>News and Events</h2>
+            <p>Here we have the latest news of action sports activity in Hawke's Bay and upcoming/recurring events in the action sports community</p>
+            <p><br>If you wish to have your news posted to the website, submit a contact form and we will get in touch</p>
+            <div class = "news_flex_container">
+                <div class = "news_col1">
+                    <div class = "news_col1_header">
+                        <h1 style="font-size: 40px;">Recent News</h1>
+                    </div>
+                    <div class = "news_article_flex_container">
+                        <div class = "news_article">
+                            <div class = "news_article_image">
+                                <img src="CSS/Web Content/learn-to-skate.jpg">
+                            </div>
+                            <div class = "news_article_title">
+                                <h1>Learn To Skate has started at Bay Skate</h1>
+                            </div>
+                            <div class = "news_article_content">
+                                <p>Learn to Skate session are now being offered at Hawke's Bay's premier skate park: Bay Skate</p>
+                                <p><br>At 10am on Sunday's, you can drop by Bay Skate to enjoy the Roller Disco vibes, or to get assistive tutoring from skilled skaters</p>
+                                <p><br>To learn more, visit the <a href="https://www.bayskate.nz/">Bay Skate website</a> or view their social media: <a href="https://www.facebook.com/BaySkateNapier/">Facebook</a> and <a href="https://www.instagram.com/bayskatenz/">Instagram</a></p>
+                            </div>
+                        </div>
+                        <div class = "news_article">
+                            <div class = "news_article_image">
+                                <img src="CSS/Web Content/learn-to-skate.jpg">
+                            </div>
+                            <div class = "news_article_title">
+                                <h1>Learn To Skate has started at Bay Skate</h1>
+                            </div>
+                            <div class = "news_article_content">
+                                <p>Learn to Skate session are now being offered at Hawke's Bay's premier skate park: Bay Skate</p>
+                                <p><br>At 10am on Sunday's, you can drop by Bay Skate to enjoy the Roller Disco vibes, or to get assistive tutoring from skilled skaters</p>
+                                <p><br>To learn more, visit the <a href="https://www.bayskate.nz/">Bay Skate website</a> or view their social media: <a href="https://www.facebook.com/BaySkateNapier/">Facebook</a> and <a href="https://www.instagram.com/bayskatenz/">Instagram</a></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class = "news_col2">
+                    <div class = "news_col2_header">
+                        <h1 style="font-size: 40px;">Upcoming Events</h1>
+                    </div>
+                    <div class = "events_flex_container">
+                        <div class = "event">
+                            <div class="event_date">
+                                <p>9th October - 12pm</p>
+                            </div>
+                            <div class="event_info">
+                                <img src="CSS/Web Content/rail-jam.jpg">
+                                <p>Bay Skate Rail Jam (Scooter)<br>290 Marine Parade, Bay Skate</p>
+                            </div>
+                        </div>
+                        <div class = "event">
+                            <div class="event_date">
+                                <p>20th November</p>
+                            </div>
+                            <div class="event_info">
+                                <img src="CSS/Web Content/bay-skate-bowl-comp.jpg">
+                                <p>Bay Skate Bowl Comp (Skateboard)<br>290 Marine Parade, Bay Skate</p>
+                            </div>
+                        </div>
+                        <div class = "event">
+                            <div class="event_date">
+                                <p>Every Sunday - 10am to 12pm</p>
+                            </div>
+                            <div class="event_info">
+                                <img src="CSS/Web Content/learn-to-skate.jpg">
+                                <p>Learn to Skate (Roller Skate)<br>290 Marine Parade, Bay Skate</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+        <!--Footer-->
+        <footer>
+            <div>
+                Created by: Zachariah Hull<br>
+                <b>This website has been created and used for academic purposes only.</b><br>
+                Contact me at:
+                <a href="mailto:hullz1@student.eit.ac.nz">hullz1@student.eit.ac.nz</a>
+                <br>
+                <br>
+                <p><a href="references-authenticity.html">References and Authenticity</a> | <a href="privacy-policy.html">Privacy Policy</a></p>
+            </div>
+        </footer>
+        <script src="JavaScript/javascript.js"></script>
+    </body>
+</html>

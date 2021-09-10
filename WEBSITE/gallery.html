@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+    <!--HEAD SECTION-->
+    <head>
+        <meta charset="UTF-8">
+        <title>Gallery - Action Sports Hawkes Bay</title>
+        <meta name="viewport" content="width=device-width, initial scale 1.0">
+        <link rel="stylesheet" type="text/css" href="CSS/style.css">
+        <link href="https://fonts.googleapis.com/css2?family=Oswald&display=swap" rel="stylesheet"> <!--Font Family - 'Oswald'-->
+        <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    </head>
+    <!--BODY SECTION-->
+    <body>
+        <!--Nav Bar-->
+        <div id="nav" class="overlay">
+            <div class="overlay_content">
+                <ul>
+                    <li><a href="index.html" class="page_link">Home</a></li>
+                    <li><a href="action-sports.html" class="page_link">Action Sports</a></li>
+                    <li><a href="local-information.html" class="page_link">Local Information</a></li>
+                    <li><a href="news-and-events.html" class="page_link">News and Events</a></li>
+                    <li><a href="gallery.html" id="active_page" class="page_link">Gallery</a></li>
+                    <li><a href="contact-information.html" class="page_link">Contact Us</a></li>
+                    <li><a href="references-authenticity.html" class="page_link">References</a></li>
+                </ul>
+                <button class="arrow up closebtn" onclick="closeNav()"></button>
+            </div>
+        </div>
+        <!--Header-->
+        <header class="header_container" id="gallery_header">
+            <button id = "nav_button" onclick="openNav()"><i class="material-icons" style="font-size: 50px;">menu</i></button>
+            <div class = "box_web_title">
+                <h1 class = "web_title">Action Sports - Hawke's Bay</h1>
+            </div>
+            <div class = "box_page_title">
+                <h1 class = "page_title">Gallery</h1>
+            </div>
+        </header>
+        <!--Main-->
+        <main class="gallery_page_container">
+            <div class="action_sports_tab_bar">
+                <button class="action_sports_tab_button tablink tab_button_active" onclick="openSport(event,'skateboarding')">Skateboarding</button>
+                <button class="action_sports_tab_button tablink" onclick="openSport(event,'scootering')">Scootering</button>
+                <button class="action_sports_tab_button tablink" onclick="openSport(event,'roller/aggressive_skating')">Roller/Aggressive Skating</button>
+                <button class="action_sports_tab_button tablink" onclick="openSport(event,'bmx')">BMX</button>
+                <button class="action_sports_tab_button tablink" onclick="openSport(event,'other')">Other</button>
+            </div>
+            <!--Skateboarding-->
+            <div id="skateboarding" class="sports_tab_container">
+                <div class="slideshow_container">
+                    <!--Image 1-->
+                    <div class="slide_images">
+                        <img src="CSS/Web Content/slide-1.webp" style="height:100%;" class="center_image">
+                    </div>
+                    <!--Image 2-->
+                    <div class="slide_images">
+                        <img src="CSS/Web Content/slide-2.jpg" style="height:100%;" class="center_image">
+                    </div>
+                    <!--Image 3-->
+                    <div class="slide_images">
+                        <img src="CSS/Web Content/slide-3.webp" style="height:100%;" class="center_image">
+                    </div>
+                    <!--Image 4-->
+                    <div class="slide_images">
+                        <img src="CSS/Web Content/slide-4.jpg" style="height:100%;" class="center_image">
+                    </div>
+                    <!--Image 5-->
+                    <div class="slide_images">
+                        <img src="CSS/Web Content/slide-5.jpg" style="height:100%;" class="center_image">
+                    </div>
+                    <!--Image 6-->
+                    <div class="slide_images">
+                        <img src="CSS/Web Content/slide-6.jpg" style="height:100%;" class="center_image">
+                    </div>
+
+
+                    <!--Forward and Back arrows-->
+                    <a class="left_arrow" onclick="plusSlides(-1)">❮</a>
+                    <a class="right_arrow" onclick="plusSlides(1)">❯</a>
+                    
+                    <!--Image title-->
+                    <div class="slide_title_container">
+                        <p id="slide_title"></p>
+                    </div>
+
+                    <!--Image list-->
+                    <div class="row slide_list_container">
+                        <div class="slide_list_image">
+                          <img class="inactive_slide cursor" src="CSS/Web Content/slide-1.webp" style="width:100%" onclick="currentSlide(1)" alt="Skateboard Blunt">
+                        </div>
+                        <div class="slide_list_image">
+                          <img class="inactive_slide cursor" src="CSS/Web Content/slide-2.jpg" style="width:100%" onclick="currentSlide(2)" alt="Scooter Air">
+                        </div>
+                        <div class="slide_list_image">
+                            <img class="inactive_slide cursor" src="CSS/Web Content/slide-3.webp" style="width:100%" onclick="currentSlide(3)" alt="Roller-Derby Woman">
+                        </div>
+                        <div class="slide_list_image">
+                            <img class="inactive_slide cursor" src="CSS/Web Content/slide-4.jpg" style="width:100%" onclick="currentSlide(4)" alt="Downhill Skating">
+                        </div>
+                        <div class="slide_list_image">
+                            <img class="inactive_slide cursor" src="CSS/Web Content/slide-5.jpg" style="width:100%" onclick="currentSlide(5)" alt="BMX Air">
+                        </div>
+                        <div class="slide_list_image">
+                            <img class="inactive_slide cursor" src="CSS/Web Content/slide-6.jpg" style="width:100%" onclick="currentSlide(6)" alt="Aggressive Skate Grind">
+                        </div>        
+                    </div>
+                </div>
+            </div>
+            <!--Scootering-->
+            <div id="scootering" class="sports_tab_container"  style="display: none;">
+            </div>
+            <!--Roller/Aggressive Skating-->
+            <div id="roller/aggressive_skating" class="sports_tab_container"  style="display: none;">
+            </div>
+            <!--BMX-->
+            <div id="bmx" class="sports_tab_container"  style="display: none;">
+            </div>
+            <!--Other-->
+            <div id="other" class="sports_tab_container"  style="display: none;">
+            </div>
+        </main>
+        <!--Footer-->
+        <footer>
+            <div>
+                Created by: Zachariah Hull<br>
+                <b>This website has been created and used for academic purposes only.</b><br>
+                Contact me at:
+                <a href="mailto:hullz1@student.eit.ac.nz">hullz1@student.eit.ac.nz</a>
+                <br>
+                <br>
+                <p><a href="references-authenticity.html">References and Authenticity</a> | <a href="privacy-policy.html">Privacy Policy</a></p>
+            </div>
+        </footer>
+        <script src="JavaScript/javascript.js"></script>
+    </body>
+</html>

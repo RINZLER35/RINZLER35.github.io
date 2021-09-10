@@ -1,0 +1,991 @@
+/*Functions*/
+/*Functions*/
+
+
+/*All style*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+    /*Font*/
+    /*font-family:'Trebuchet MS', Arial, sans-serif - Old font*/
+    font-family: 'Oswald', sans-serif;
+}
+
+a{
+    color: blue;
+}
+
+.column{
+    flex-direction: column;
+}
+
+.row{
+    flex-direction: row;
+}
+
+.no_dots{
+    list-style-type: none;
+    margin: 0%;
+    padding: 0%;
+}
+
+.no_dots li{
+    padding: 5px 0px;
+}
+/*All style*/
+
+
+/*NAV style*/
+
+.overlay{
+    height: 0;
+    width: 100%;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0, 0.9);
+    overflow-x: hidden;
+    transition: 0.5s;
+}
+
+.closebtn {
+    position: absolute;
+    top: 35px;
+    right: 145px;
+    font-size: 60px;
+}
+
+.arrow {
+    border: solid white;
+    border-width: 0 10px 10px 0;
+    display: inline-block;
+    padding: 10px;
+    background-color: transparent;
+    transition-duration: 0.4s;
+}
+
+.arrow:hover{
+    border: solid red;
+    border-width: 0 10px 10px 0;
+    display: inline-block;
+    padding: 10px;
+    background-color: transparent;
+}
+
+.up {
+    transform: rotate(-135deg);
+    -webkit-transform: rotate(-135deg);
+}
+
+.overlay ul{
+    text-align: center;
+    margin: 15px;
+}
+
+
+.overlay ul li{
+    display: inline-block;
+}
+
+.overlay-content {
+    position: relative;
+    top: 25%;
+    width: 100%;
+    margin-top: 30px;
+    display: inline-block;
+}
+
+#nav_button{
+    width: fit-content;
+    height: 70px;
+    margin: 5px;
+    padding: 5px;
+    background-color: red;
+    color: orange;
+    border: solid black 2px;
+    transition-duration: 0.4s;
+}
+
+#nav_button p{
+    font-size: 40px;
+    text-align: center;
+}
+
+#nav_button:hover{
+    background-color: orange;
+    color: red;
+}
+/*
+nav ul{
+    overflow: hidden;
+    text-align: center;
+}
+
+nav ul li{
+    display: inline-block;
+}
+
+nav ul li a{
+    background-color: orange;
+    text-align: center;
+    display: block;
+    padding: 10px 10px;
+}
+*/
+.page_link{
+    color: grey;
+    font-size: 35px;
+    text-decoration: none;
+    margin: 0px 30px 0px 0px;
+}
+
+.page_link:hover{
+    color: white;
+    transition-duration: 0.4s;
+}
+    
+/*NAV - Background color for active tab*/
+#active_page{
+    color: white;
+}
+/*NAV style*/
+
+
+
+
+/*Header style - and title's style*/
+
+header {
+    height: 50vh;
+
+    display: flex;
+}
+
+/*Header class*/
+#home_header {
+    background: url("Web Content/bay-skate-outside-skate-rink.jpg");
+    background-size: 50% 100%;
+}
+
+#action_sports_header {
+    background: url("Web Content/bmx-1.jpg");
+    background-size: 50% 100%;
+}
+
+#info_header{
+    background: url("Web Content/maxresdefault.jpg");
+    background-size: 50% 100%;  
+}
+
+#gallery_header{
+    background: url("Web Content/gallery-header.jpg");
+    background-size: 50% 100%;
+}
+
+#references_header{
+    background: url("Web Content/HFTTQCGX3FQCLFF6WGKYDYYATE.jpg");
+    background-size: 50% 100%;
+}
+
+#news_header{
+    background: url("Web Content/FLANEURZ-BLOG-SARAH3.jpg");
+    background-size: 50% 100%;
+}
+
+#contact_header{
+    background: url("Web Content/contact-us.webp");
+    background-size: 25% 100%;
+}
+/*Header class*/
+
+/*Title class*/
+.box_web_title {
+    /*Centering Text*/
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 260px;
+    height: 120px;
+    background-color: red;
+    border: solid 2px black;
+    
+    position: absolute;
+    bottom: 55%;
+    left: 10%;
+
+    text-align: center;
+}
+
+.box_page_title {
+    /*Centering Text*/
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 260px;
+    height: 120px;
+    background-color: red;
+    border: solid 2px black;
+    
+    position: absolute;
+    bottom: 55%;
+    right: 10%;
+
+    text-align: center;
+}
+
+.web_title {
+    color: orange;
+    display: inline;
+    font-family: 'Oswald', sans-serif;
+}
+
+.page_title {
+    color: orange;
+    display: inline;
+    font-family: 'Oswald', sans-serif;
+}
+/*Title class*/
+
+/*Header style - and title's style*/
+
+/*Body style*/
+body{
+    background-color: maroon;
+}
+
+p{
+    font-size: 20px;
+}
+
+li{
+    font-size: 20px;
+}
+
+img{
+    max-width: 100%;
+    height: auto;
+    border-radius: 30px;
+    padding: 5px;
+    vertical-align: middle;
+}
+/*Body style*/
+
+
+
+/******************   Home page (specific) style   *******************/
+
+/*Flex style*/
+.home_flex_container{
+    display: flex;
+}
+/*Flex style*/
+
+.home_page_container{
+    background-color: orange;
+    display: flex;
+    flex-direction: column;
+    border: 2px black solid;
+}
+
+.home_col1{
+    flex: 2;
+    text-align: left;
+    padding: 5px 20px;
+}
+
+.home_col2{
+    flex: 1;
+    text-align: center;
+    padding: 5px 20px;
+}
+/******************   Home page (specific) style   *******************/
+
+/******************   Action Sports page (specific) style   ******************/
+
+/*Flex style*/
+.sports_flex_container{
+    display: flex;
+}
+/*Flex style*/
+
+.sports_col1{
+    flex: 2;
+    text-align: left;
+    padding: 5px 20px;
+}
+
+.sports_col2{
+    flex: 1;
+    text-align: center;
+    padding: 5px 20px;
+}
+
+.action_sports_main_container{
+    background-color: orange;
+    display: flex;
+    flex-direction: column;
+    border: 2px black solid;    
+}
+
+#action_sports_description {
+    text-align: left;
+    padding: 5px 20px;
+}
+
+.action_sports_tab_bar {
+    width: max-content;
+    padding: 5px;
+    margin: 5px 25vw 5px 25vw;
+}
+
+.action_sports_tab_button {
+    background-color: red;
+    border: black solid 5px;
+    color: orange;
+    margin: 10px;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 22px;
+    transition-duration: 0.4s;
+}
+
+.action_sports_tab_button:hover {
+    background-color: orange;
+    color: red;
+}
+
+.tab_button_active {
+    background-color: orange;
+    color: red;
+}
+
+.sports_resources{
+    border-top: black solid 2px;
+    padding: 5px 20px;
+}
+
+/*TimeLine Style*/
+
+/* The actual timeline (the vertical ruler) */
+.timeline {
+    position: relative;
+    max-width: auto;
+    margin: auto;
+}
+
+/* The actual timeline (the vertical ruler) */
+.timeline::after {
+    content: '';
+    position: absolute;
+    width: 6px;
+    background-color: red;
+    border: black medium solid;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    margin-left: -3px;
+}
+
+/* Container around content */
+.container {
+    padding: 10px 40px;
+    position: relative;
+    background-color: inherit;
+    width: 50%;
+}
+
+/* The circles on the timeline */
+.container::after {
+    content: '';
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    right: -19px;
+    background-color: orange;
+    border: black solid medium;
+    top: 15px;
+    border-radius: 50%;
+    z-index: 1;
+}
+
+/* Place the container to the left */
+.left {
+    left: 0;
+}
+
+/* Place the container to the right */
+.right {
+    left: 50%;
+}
+
+/* Add arrows to the left container */
+.left::before {
+    content: " ";
+    height: 0;
+    position: absolute;
+    top: 22px;
+    width: 0;
+    z-index: 1;
+    right: 30px;
+    border: medium solid black;
+    border-width: 10px 0 10px 10px;
+    border-color: transparent transparent transparent black;
+}
+
+/* Add arrows to the right container */
+.right::before {
+    content: " ";
+    height: 0;
+    position: absolute;
+    top: 22px;
+    width: 0;
+    z-index: 1;
+    left: 30px;
+    border: medium solid black;
+    border-width: 10px 10px 10px 0;
+    border-color: transparent black transparent transparent;
+}
+
+/* Adjust the circle for containers on the right side */
+.right::after {
+    left: -13px;
+}
+
+/* The actual content */
+.content {
+    padding: 20px 30px;
+    background-color: red;
+    border: black solid 4px;
+    position: relative;
+    border-radius: 6px;
+    color: orange;
+}
+
+/*TimeLine Style*/
+
+/******************   Action Sports page (specific) style   ******************/
+
+/******************   Local Information page (specific) style   ******************/
+.info_page_container{
+    background-color: orange;
+    display: flex;
+    flex-direction: column;
+    border: 2px black solid;    
+}
+
+.info_flex_container{
+    text-align: left;
+    padding: 5px 20px;
+    display: flex;
+    flex-direction: row;
+}
+
+.info_page_section_title{
+    text-align: center; 
+    font-size: 52px;
+    background-color: red;
+    padding: 5px 20px;
+    margin: 5px 20px;
+}
+
+.info_description{
+    font-size: 20px;
+}
+
+
+.info_col1{
+    flex: 3;
+    text-align: center;
+    padding: 5px 20px;
+}
+
+.info_col2{
+    flex: 1;
+    background-color: rgb(221, 124, 6);
+    text-align: center;
+    font-size: 20px;
+    padding: 5% 20px 5% 20px;
+    border: black solid 2px;
+}
+
+.info_col2 ul li{
+    font-size: 32px;
+}
+
+.info_link_button {
+    background-color: red;
+    border: black solid 5px;
+    color: orange;
+    margin: 10px;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 20px;
+    transition-duration: 0.4s;
+}
+
+.info_link_button:hover {
+    background-color: orange;
+    color: red;
+}
+
+/*Fade Image Style*/
+
+.fade_image_container {
+    position: relative;
+    display: inline-block;
+    max-width: 70%;
+}
+  
+.fade_image {
+    opacity: 1;
+    display: block;
+    width: 100%;
+    height: auto;
+    transition: .5s ease;
+    backface-visibility: hidden;
+}
+  
+.middle {
+    transition: .5s ease;
+    opacity: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%)
+}
+  
+.fade_image_container:hover .fade_image {
+    opacity: 0.3;
+    border: black solid 2px;
+}
+  
+.fade_image_container:hover .middle {
+    opacity: 1;
+}
+  
+.image_title {
+    background-color: red;
+    color: orange;
+    font-size: 32px;
+    padding: 16px 32px;
+}
+
+/*Fade Image Style*/
+
+/******************   Local Information page (specific) style   ******************/
+
+/******************   News and Events page (specific) style   ******************/
+.news_page_container{
+    background-color: orange;
+    padding: 5px;
+    display: flex;
+    flex-direction: column;
+    border: 2px black solid;
+}
+
+.news_flex_container{
+    display: flex;
+}
+
+.news_article_flex_container{
+    display: flex;
+    flex-direction: column;
+    padding: 0px 0px 10px 0px;
+}
+
+.news_article{
+    flex-direction: column;
+    display: flex;
+    padding: 20px 0px 0px 0px;
+}
+
+.news_article_image{
+    flex: 2;
+    border: solid black 3px;
+    background-color: orange;
+}
+
+.news_article_title{
+    flex: 1;
+    border: solid black 3px;
+    text-align: center;
+    background-color: red
+}
+
+.news_article_content{
+    flex: 2;
+    border: solid black 3px;
+    background-color: orange;
+}
+
+.news_col1{
+    flex: 1;
+    border: black solid 2px;
+    padding: 20px 100px 0px 100px;
+    background-color: rgb(219, 121, 1);
+}
+
+.news_col1_header{
+    text-align: center;
+    border-bottom: solid black 2px;
+}
+
+.news_col2{
+    flex: 1;
+    border: black solid 2px;
+    padding: 20px 100px 0px 100px;
+    background-color: rgb(219, 121, 1);
+}
+
+.news_col2_header{
+    text-align: center;
+    border-bottom: solid black 2px;
+}
+
+.events_flex_container{
+    display: flex;
+    flex-direction: column;
+    padding: 0px 0px 10px 0px;
+}
+
+.event{
+    text-align: center;
+    display: flex;
+    flex-direction: row;
+    border-bottom: solid black 2px;
+    justify-content: center;
+    align-items: center;
+}
+
+.event_date{
+    text-align: center;
+    flex: 1;
+    border-right: solid black 2px;
+}
+
+.event_date p{
+    font-size: 30px;    
+}
+
+.event_info{
+    text-align: center;
+    flex: 1;
+}
+
+/******************   News and Events page (specific) style   ******************/
+
+/******************   Gallery page (specific) style   ******************/
+
+.gallery_page_container {
+    background-color: orange;
+    padding: 5px;
+    display: flex;
+    flex-direction: column;
+    border: 2px black solid;
+}
+
+/*Slideshow Style*/
+.slideshow_container {
+    position: relative;
+}
+
+.slide_images {
+    display: none;
+}
+
+.center_image {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+}
+
+.cursor {
+    cursor: pointer;
+}
+
+.left_arrow,
+.right_arrow {
+  cursor: pointer;
+  position: absolute;
+  top: 40%;
+  width: auto;
+  padding: 16px;
+  margin-top: -50px;
+  color: red;
+  font-weight: bold;
+  font-size: 40px;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+.right_arrow {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+.left_arrow:hover,
+.right_arrow:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.slide_title_container {
+    text-align: center;
+    background-color: red;
+    padding: 2px 16px;
+    margin: 5px 0px;
+    color: orange;
+}
+
+#slide_title{
+    font-size: 40px;
+}
+
+.slide_list_container {
+    background-color: rgb(214, 121, 7);
+    border: black solid 3px;
+}
+
+.slide_list_image {
+    padding: 5px;
+}
+
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.slide_list_image {
+    float: left;
+    width: 16.66%;
+}
+
+.inactive_slide {
+    opacity: 0.6;
+}
+
+.active_slide,
+.inactive_slide:hover {
+  opacity: 1;
+  border: black solid 2px;
+}
+/*Slideshow Style*/
+
+
+/******************   Gallery page (specific) style   ******************/
+
+
+
+/******************   Reference/Authenticity page (specific) style   ******************/
+
+.reference_page_container{
+    background-color: orange;
+    display: flex;
+    flex-direction: column;
+    border: 2px black solid;
+}
+
+#authenticity_statement{
+    padding: 5px 20px;
+    text-align: center;
+}
+
+#reference_list{
+    padding: 5px 20px;
+}
+
+.page_reference{
+    border-top: solid black 2px;
+}
+/******************   Reference/Authenticity page (specific) style   ******************/
+
+/******************   Privacy Policy page (specific) style   ******************/
+.privacy_container{
+    background-color: orange;
+    margin: 5px 0px;
+    display: flex;
+    flex-direction: column;
+    border: 2px black solid;
+    text-align: center;
+}
+/******************   Privacy Policy page (specific) style   ******************/
+
+/******************   Contact Us page (specific) style   ******************/
+
+.contact_page_container{
+    background-color: orange;
+    padding: 5px;
+    display: flex;
+    flex-direction: column;
+    border: 2px black solid;
+}
+
+.contact_flex_container{
+    display: flex;
+}
+
+.contact_col1{
+    flex: 1;
+    text-align: center;
+    padding: 20px;
+}
+
+.contact_col1 h2{
+    border-bottom: black solid 2px;
+    padding-bottom: 5px;
+}
+
+.contact_col2{
+    flex: 1;
+    text-align: center;
+    padding: 20px;
+}
+
+.contact_col2 h2{
+    border-bottom: black solid 2px;
+    padding-bottom: 5px;
+}
+
+.contact_col3{
+    flex: 1;
+    text-align: center;
+    padding: 20px;
+}
+
+.contact_col3 h2{
+    border-bottom: black solid 2px;
+    padding-bottom: 5px;
+}
+
+.contact_titles{
+    flex: 1;
+    text-align: center;
+    padding: 20px;
+    font-weight: bold;
+}
+
+.contact_names{
+    flex: 1;
+    text-align: center;
+    padding: 20px;
+}
+
+.contact_form_link_button {
+    background-color: red;
+    border: black solid 5px;
+    color: orange;
+    margin: 10px;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 36px;
+    transition-duration: 0.4s;
+}
+
+.contact_form_link_button:hover {
+    background-color: orange;
+    color: red;
+}
+
+/******************   Contact Us page (specific) style   ******************/
+
+/******************   Contact Form page (specific) style   ******************/
+
+input[type=text], select, textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+    margin-top: 6px;
+    margin-bottom: 16px;
+    resize: vertical;
+}
+  
+input[type=submit] {
+    background-color: orange;
+    color: black;
+    padding: 12px 20px;
+    border: none;
+    cursor: pointer;
+}
+  
+input[type=submit]:hover {
+    background-color: darkorange;
+}
+  
+.form_container {
+    background-color: #ff1717;
+    padding: 20px;
+}
+
+/******************   Contact Form page (specific) style   ******************/
+
+
+
+/******************   Footer style   ******************/
+footer{
+    text-align: center;
+    font-size: 20px;
+    padding: 5px;
+}
+/******************   Footer style   ******************/
+
+/******************   Media style (responsiveness)   ******************/
+
+/* Media queries - Responsive timeline on screens less than 600px wide */
+@media screen and (max-width: 600px) {
+    /* Place the timelime to the left */
+      .timeline::after {
+        left: 31px;
+      }
+    
+    /* Full-width containers */
+      .container {
+        width: 100%;
+        padding-left: 70px;
+        padding-right: 25px;
+      }
+    
+    /* Make sure that all arrows are pointing leftwards */
+      .container::before {
+        left: 60px;
+        border: medium solid white;
+        border-width: 10px 10px 10px 0;
+        border-color: transparent white transparent transparent;
+      }
+    
+    /* Make sure all circles are at the same spot */
+      .left::after, .right::after {
+        left: 15px;
+      }
+    
+    /* Make all right containers behave like the left ones */
+      .right {
+        left: 0%;
+      }
+    }
+
+
+
+/* Media queries - Responsive flex columns and rows on screens less than 600px wide */
+@media screen and (max-width: 600px) {
+    .row {
+        flex-direction: column;
+    }
+}
+
+/******************   Media style (responsiveness)   ******************/
