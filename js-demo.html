@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>JavaScript Demo Page</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+    </head>
+
+    <!------------------------------BODY------------------------------------------------>
+    <body>
+        <!------- Header ------->
+        <header>
+            <!------------ NAV BAR ------------>
+            <nav class="navbar border border-dark border-2" style="background-color: lightgreen;">
+                <div class="container-fluid">
+                    <a class="navbar-brand" href="#"><img src="./MEDIA/global.png"> ITWD6.408</a>
+                    <!--NAV BAR LINKS-->
+                    <div class="navbar-expand-md" id="navbarSupportedContent">
+                        <ul class="navbar-nav me-auto mb-0 mb-lg-0">
+                            <li class="nav-item d-none d-md-block">
+                                <a class="nav-link" aria-current="page" href="index.html">HOME</a>
+                            </li>
+                            <li class="nav-item d-none d-md-block">
+                                <a class="nav-link" href="form.html">FORMS</a>
+                            </li>
+                            <li class="nav-item d-none d-md-block">
+                                <a class="nav-link" href="xml-rss.html">XML/RSS</a>
+                            </li>
+                                <li class="nav-item d-none d-md-block">
+                                <a class="nav-link active" href="js-demo.html">JAVASCRIPT</a>
+                            </li>
+                            <li class="nav-item d-none d-md-block">
+                                <a class="nav-link" href="my-research.html">RESEARCH</a>
+                            </li>
+                        </ul>    
+                    </div>
+                    <!--NAV BAR CURTAIN MENU-->
+                    <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+                        <div class="offcanvas-header">
+                            <h5 class="offcanvas-title" id="offcanvasNavbarLabel"><img src="./MEDIA/global.png"> ITWD6.408</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                        </div>
+                        <div class="offcanvas-body">
+                            <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                                <li class="nav-item">
+                                    <a class="nav-link" aria-current="page" href="index.html">HOME</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" aria-current="page" href="form.html">FORMS</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="xml-rss.html">XML/RSS</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link active" href="js-demo.html">JAVASCRIPT</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="my-research.html">RESEARCH</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+        </header>
+
+        <!------------ Main Section ------------>
+        <main>
+            <!--Container for all demos-->
+            <div class="container p-1">
+                <div class="row">
+                    <!--Button section-->
+                    <div class="col-12 col-md-2">
+                        <div class="container-fluid">
+                            <div class="row justify-content-center">
+                                <!--Slideshow Button-->						
+                                <button class="col-10 col-sm-5 col-md-12 btn btn-primary m-1" type="button" 
+                                        data-bs-toggle="collapse" data-bs-target="#slideshows" 
+                                        aria-expanded="false" aria-controls="slideshows">Demo 1: Slideshows</button>
+                                <!--Customisation Button-->
+                                <button class="col-10 col-sm-5 col-md-12 btn btn-warning m-1" type="button" 
+                                        data-bs-toggle="collapse" data-bs-target="#webCustomisation" 
+                                        aria-expanded="false" aria-controls="webCustomisation">Demo 2: Web Page Customisation</button>
+                                <!--Product Selection Button-->
+                                <button class="col-10 col-sm-5 col-md-12 btn btn-primary m-1" type="button" 
+                                    data-bs-toggle="collapse" data-bs-target="#productSelection" 
+                                    aria-expanded="false" aria-controls="productSelection">Demo 3: Product Selection and Add Product</button>
+                                <!--Other button-->
+                                <button class="col-10 col-sm-5 col-md-12 btn btn-warning m-1" type="button"
+                                    data-bs-toggle="collapse" data-bs-target="#voting"
+                                    aria-expanded="false" aria-controls="voting">Demo 4: Voting (like/dislike) a product</button>
+                            </div>
+                        </div>			
+                    </div>
+
+                    <!--Main Area-->
+                    <div class="col-12 col-md-10">
+                        <div class="row">
+
+                            <!---------- Slideshow Section ---------->
+                            <div class="col-12">
+                                <div class="collapse show multi-collapse" id="slideshows">
+                                    <h2 class="text-center bg-primary p-2">Slideshows (Automatic and Manual)</h2>
+                                    <section class="container">
+                                        <!--Automatic Slideshow-->
+                                        <div class="row bg-light border border-2 p-3">
+                                            <div class="col-12 col-md-6 justify-content-center text-center align-self-center">
+                                                <img id="auto-product-title" class="img-fluid align-middle" src="./MEDIA/ddj-400_title.png">
+                                                <p id="auto-product-description" class="p-3 fs-6">Learning to DJ has never been easier than with the DDJ-400 2-channel DJ controller for rekordbox. Packed with features to help you comfortably develop your skills, like dedicated cue buttons, Beat FX, CDJ-style looping controls and more.</p>
+                                            </div>
+                                            <div class="col-12 col-md-6 justify-content-center align-self-center text-center">
+                                                <img id="auto-product-image" class="img-fluid" src="https://cdn.shopify.com/s/files/1/0503/4049/5523/products/DDJ-400_prm_angle_180523_jpg_600x.jpg?v=1615420279">
+                                            </div>
+                                        </div>
+                                        <br>
+                                        <!--Manual Slideshow-->
+                                        <div class="row bg-light border border-2 p-3">
+                                            <div class="col-12 col-md-6 justify-content-center text-center align-self-center">
+                                                <img id="manual-product-title" class="img-fluid" src="./MEDIA/ddj-400_title.png">
+                                                <p id="manual-product-description" class="p-3 fs-6">Learning to DJ has never been easier than with the DDJ-400 2-channel DJ controller for rekordbox. Packed with features to help you comfortably develop your skills, like dedicated cue buttons, Beat FX, CDJ-style looping controls and more.</p>
+                                            </div>
+                                            <div class="col-12 col-md-6 justify-content-center align-self-center text-center">
+                                                <img id="manual-product-image" class="img-fluid" src="https://cdn.shopify.com/s/files/1/0503/4049/5523/products/DDJ-400_prm_angle_180523_jpg_600x.jpg?v=1615420279">
+                                            </div>
+                                        </div>
+                                        <br>
+                                        <div class="text-center">
+                                            <button type="button" onclick="previousProduct()" class="btn btn-outline-danger align-self-center">PREVIOUS</button>
+                                            <button type="button" onclick="nextProduct()" class="btn btn-outline-success align-self-center">NEXT</button>
+                                        </div>
+                                    </section>
+                                    <br>
+                                </div>
+                            </div>
+
+                            <br>
+
+                            <!----------Webpage customisation Section---------->
+                            <div class="col-12">
+                                <div class="collapse multi-collapse" id="webCustomisation">
+                                    <h2 class="text-center bg-primary p-2">Webpage Customisation</h2>
+                                    <section>
+                                        <div class="container">
+                                            <div class="row border border-2 p-3" id="customBackground" style="background-color: #f8f9fa;">
+                                                <div class="col-12 col-md-6 justify-content-center text-center align-self-center">
+                                                    <img id="custom-product-title" class="img-fluid" src="./MEDIA/ddj-400_title.png">
+                                                    <p id="custom-product-description" class="p-3 fs-6" style="font-family:default;">Learning to DJ has never been easier than with the DDJ-400 2-channel DJ controller for rekordbox. Packed with features to help you comfortably develop your skills, like dedicated cue buttons, Beat FX, CDJ-style looping controls and more.</p>
+                                                </div>
+                                                <div class="col-12 col-md-6 justify-content-center align-self-center text-center">
+                                                    <img id="custom-product-image" class="img-fluid" src="https://cdn.shopify.com/s/files/1/0503/4049/5523/products/DDJ-400_prm_angle_180523_jpg_600x.jpg?v=1615420279">
+                                                </div>
+                                            </div>
+                                            <br>
+                                            <div class="text-center">
+                                                <h4>Customise the Font Family and Background Color below:</h4>
+                                                <select id="selectFont" onchange="displayFont()"></select>
+                                                <select id="selectBgColor" onchange="displayBgColor()"></select>
+                                            </div>
+                                        </div>
+                                    </section>
+                                    <br>
+                                </div>
+                            </div>
+
+                            <!----------Product Selection and Add-to Section---------->
+                            <div class="col-12">
+                                <div class="collapse multi-collapse" id="productSelection">
+                                    <h2 class="text-center bg-primary p-2">Product Selection and Add Product</h2>
+                                    <section>
+                                        <div class="container">
+                                            <div class="row bg-light border border-2 p-3">
+                                                <div class="col-12 col-md-6 justify-content-center text-center align-self-center">
+                                                    <h1 id="select-product-title">DDJ-400</h1>
+                                                    <p id="select-product-description" class="p-3 fs-6">Learning to DJ has never been easier than with the DDJ-400 2-channel DJ controller for rekordbox. Packed with features to help you comfortably develop your skills, like dedicated cue buttons, Beat FX, CDJ-style looping controls and more.</p>
+                                                </div>
+                                                <div class="col-12 col-md-6 justify-content-center align-self-center text-center">
+                                                    <img id="select-product-image" class="img-fluid" src="https://cdn.shopify.com/s/files/1/0503/4049/5523/products/DDJ-400_prm_angle_180523_jpg_600x.jpg?v=1615420279">
+                                                </div>
+                                            </div>
+                                            <div class="text-center">
+                                                <h4>Select a Different Product:</h4>
+                                                <select id="selectProduct" onchange="displayProduct()"></select>
+                                            </div>
+                                        </div>
+
+                                        <br>
+
+                                        <h4 class="text-center">Or add a product of your own:</h4>
+                                        <section class="text-center container">
+                                            <div class="row justify-content-center m-3">
+                                                <div class="col-auto input-group">
+                                                    <span class="input-group-text">Product Name</span>
+                                                    <input type="text" class="form-control" placeholder="..." id="new-product-name">
+                                                </div>
+                                            </div>
+
+                                            <div class="row justify-content-center m-3">
+                                                <div class="col-auto input-group">
+                                                    <span class="input-group-text">Product Description</span>
+                                                    <input type="text" class="form-control" placeholder="..." id="new-product-description">
+                                                </div>
+                                            </div>
+
+                                            <div class="row justify-content-center m-3">
+                                                <div class="col-auto input-group">
+                                                    <span class="input-group-text">Product Image URL</span>
+                                                    <input type="text" class="form-control" placeholder="..." id="new-product-image">
+                                                </div>
+                                            </div>
+
+                                            <input class="m-2" type="button" value="Add To List" onclick="addProductToList()">
+                                        </section>
+                                    </section>
+                                </div>
+                            </div>
+
+                            <!--------Voting Section-------->
+                            <div class="col-12">
+                                <div class="collapse multi-collapse" id="voting">
+                                    <h2 class="text-center bg-primary p-2">Voting (like/dislike) a product</h2>
+                                    <section>
+                                        <div class="container">
+                                            <div class="row bg-light border border-2 p-3">
+                                                <div class="col-12 col-md-6 justify-content-center text-center align-self-center">
+                                                    <h1 id="select-product-title">DDJ-400</h1>
+                                                    <p id="select-product-description" class="p-3 fs-6">Learning to DJ has never been easier than with the DDJ-400 2-channel DJ controller for rekordbox. Packed with features to help you comfortably develop your skills, like dedicated cue buttons, Beat FX, CDJ-style looping controls and more.</p>
+                                                </div>
+                                                <div class="col-12 col-md-6 justify-content-center align-self-center text-center">
+                                                    <img id="select-product-image" class="img-fluid" src="https://cdn.shopify.com/s/files/1/0503/4049/5523/products/DDJ-400_prm_angle_180523_jpg_600x.jpg?v=1615420279">
+                                                </div>
+                                            </div>
+                                            <div class="text-center">
+                                                <button type="button" class="btn btn-outline-success" id="likeButton" onclick="like()">&#128077;</button>
+                                                <p id="likeNumber" style="display: inline-block;"></p>
+                                                <button type="button" class="btn btn-outline-danger" id="dislikeButton" onclick="dislike()">&#128078;</button>
+                                                <p id="dislikeNumber" style="display: inline-block;"></p>
+                                            </div>
+                                        </div>
+                                    </section>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </main>
+
+        <!--Footer section-->
+        <footer class="text-center text-lg-start bg-secondary bg-opacity-25 text-muted">
+            <div class="text-center p-4"> Created by: Zachariah Hull <br/>
+                Contact me at: <a href="mailto:ddang@eit.ac.nz">hullz1@student.eit.ac.nz</a>
+            </div>
+        </footer>
+    
+    <!--Embed the js file at the bottom of the html file-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
+    <script src="./JS/javascript.js"></script>
+    </body>
+</html>

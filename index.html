@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Home Page</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+        <link href="./CSS/style.css" rel="stylesheet">
+    </head>
+
+    <!------------------------------ BODY ------------------------------>
+    <body>
+        <!------- Header ------->
+        <header>
+            <!------------ NAV BAR ------------>
+            <nav class="navbar border border-dark border-2" style="background-color: lightgreen;">
+                <div class="container-fluid">
+                    <a class="navbar-brand" href="#"><img src="./MEDIA/global.png"> ITWD6.408</a>
+                    <!--NAV BAR LINKS-->
+                    <div class="navbar-expand-md" id="navbarSupportedContent">
+                        <ul class="navbar-nav me-auto mb-0 mb-lg-0">
+                            <li class="nav-item d-none d-md-block">
+                                <a class="nav-link active" aria-current="page" href="index.html">HOME</a>
+                            </li>
+                            <li class="nav-item d-none d-md-block">
+                                <a class="nav-link" href="form.html">FORMS</a>
+                            </li>
+                            <li class="nav-item d-none d-md-block">
+                                <a class="nav-link" href="xml-rss.html">XML/RSS</a>
+                            </li>
+                                <li class="nav-item d-none d-md-block">
+                                <a class="nav-link" href="js-demo.html">JAVASCRIPT</a>
+                            </li>
+                            <li class="nav-item d-none d-md-block">
+                                <a class="nav-link" href="my-research.html">RESEARCH</a>
+                            </li>
+                        </ul>    
+                    </div>
+                    <!--NAV BAR CURTAIN MENU-->
+                    <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+                        <div class="offcanvas-header">
+                            <h5 class="offcanvas-title" id="offcanvasNavbarLabel"><img src="./MEDIA/global.png"> ITWD6.408</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                        </div>
+                        <div class="offcanvas-body">
+                            <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                                <li class="nav-item">
+                                    <a class="nav-link active" aria-current="page" href="index.html">HOME</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="form.html">FORMS</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="xml-rss.html">XML/RSS</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="js-demo.html">JAVASCRIPT</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="my-research.html">RESEARCH</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+        </header>
+        <!------------ Main Section ------------>
+        <main>
+
+            <!--Showcase Header-->
+            <section class="showcase">
+                <div class="show-image"><img src="./MEDIA/pad_thai_header.jpg"></div>
+
+                <div class="show-text">
+                    <h3>Advanced Internet and Web Page Development</h3>
+                    <h1>Zachariah Hull</h1>
+                    <p>I am a student at EIT</p>
+                </div>
+            </section>
+
+            <!--Main Content Container-->
+            <div class="container-fluid">
+                <div class="row">
+
+                    <!--Biography-->
+                    <section class="col-md-6 col-sm-12 p-3 bg-warning container justify-content-center align-items-center">
+                        <div class="row">
+                            <h1 class="text-center">Biography</h1>
+                            <hr class="border border-dark border-2">
+                            <div class="col-md-5 align-self-center"><img src="./MEDIA/furio-tedeschi-cp-netagent-version2stronger-furiotedeschi-26-03-2019.jpg" class="img-fluid rounded mx-auto d-block"></div>
+                            <div class="col-md-7">
+                                <h2 class="text-center">Zachariah Hull</h2>
+                                <p>
+                                    Hi, my name is Zachariah Hull. I am a student at the Eastern Institute of Technology 
+                                    studying a Bachelor of Computing Systems.
+                                </p>
+                                <p>
+                                    My hobbies are playing Golf, DJ'ing/mixing music, playing video games, 
+                                    playing poker, playing in-line hockey, and skateboaring.
+                                </p>
+                                <p>
+                                    My primary interests in IT are programming/software development, networking, 
+                                    database development, and webpage development.
+                                </p>
+                            </div>    
+                        </div>
+                    </section>
+
+                    <!--Web Technologies-->
+                    <section class="col-md-6 col-sm-12 p-2 bg-danger">
+                        <h1 class="text-center">My Top Five Web Technologies</h1>
+                        <hr class="border border-dark border-2">
+
+                        <!--------- Accordion --------->
+                        <div class="accordion" id="webAccordion">
+                            <!-- Item One: VS Code -->
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="headingOne">
+                                    <button class="accordion-button collapsed" style="background-color: orange; font-weight: bold;" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                        1. Visual Studio Code
+                                    </button>
+                                </h2>
+                                <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#webAccordion">
+                                    <div class="accordion-body" style="background-color: darkorange;">
+                                        <div class="row">
+                                            <div class="col-6 align-self-center">
+                                                <img src="./MEDIA/vscode_icon.png" class="img-fluid">
+                                            </div>
+                                            <div class="col-6 align-self-center" style="font-size: 20px;">
+                                                Visual Studio Code is a free code editor application. 
+                                                I use Visual Studio Code for editing my HTML, CSS and JavaScript files.    
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Item Two: Draw.io -->
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="headingTwo">
+                                    <button class="accordion-button collapsed" style="background-color: orange; font-weight: bold;" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                        2. Draw.io
+                                    </button>
+                                </h2>
+                                <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="heading" data-bs-parent="#webAccordion">
+                                    <div class="accordion-body" style="background-color: darkorange;">
+                                        <div class="row">
+                                            <div class="col-6 align-self-center">
+                                                <img src="./MEDIA/DrawIO.png" class="img-fluid rounded-circle">
+                                            </div>
+                                            <div class="col-6 align-self-center" style="font-size: 20px;">
+                                                Draw.io is a free, web-based diagramming tool. 
+                                                I use this application to design my web-page user interfaces.
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Item Three: GitHub -->
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="headingThree">
+                                    <button class="accordion-button collapsed" style="background-color: orange; font-weight: bold;" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                        3. GitHub
+                                    </button>
+                                </h2>
+                                <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="heading" data-bs-parent="#webAccordion">
+                                    <div class="accordion-body" style="background-color: darkorange;">
+                                        <div class="row">
+                                            <div class="col-6 align-self-center">
+                                                <img src="./MEDIA/GitHub-Logo.png" class="img-fluid">
+                                            </div>
+                                            <div class="col-6 align-self-center" style="font-size: 20px;">
+                                                GitHub is a web-based version control system and online storage.
+                                                I use GitHub to track changes, issues and improvements to my web pages, and to record iteration history.        
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Item Four: Mozilla Firefox -->
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="headingFour">
+                                    <button class="accordion-button collapsed" style="background-color: orange; font-weight: bold;" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                                        4. Mozilla Firefox
+                                    </button>
+                                </h2>
+                                <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="heading" data-bs-parent="#webAccordion">
+                                    <div class="accordion-body" style="background-color: darkorange;">
+                                        <div class="row">
+                                            <div class="col-6 align-self-center">
+                                                <img src="./MEDIA/Firefox_logo.png" class="img-fluid">
+                                            </div>
+                                            <div class="col-6 align-self-center" style="font-size: 20px;">
+                                                Mozilla Firefox is a free web browser application.
+                                                I use Mozilla Firefox for it's web designer inspection tools, such as responsive design mode.        
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Item Five: Bootstrap -->
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="headingFive">
+                                    <button class="accordion-button collapsed" style="background-color: orange; font-weight: bold;" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+                                        5. Bootstrap
+                                    </button>
+                                </h2>
+                                <div id="collapseFive" class="accordion-collapse collapse" aria-labelledby="heading" data-bs-parent="#webAccordion">
+                                    <div class="accordion-body" style="background-color: darkorange;">
+                                        <div class="row">
+                                            <div class="col-6 align-self-center">
+                                                <img src="./MEDIA/bootstrap_logo.png" class="img-fluid">
+                                            </div>
+                                            <div class="col-6 align-self-center" style="font-size: 20px;">
+                                                Bootstrap is a free styling (CSS) framework for HTML files.
+                                                I use Bootstrap to style my web pages.
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+            </div>
+
+            <!--Web Competencies-->
+            <div class="container-fluid bg-success">
+                <div class="row justify-content-around">
+                    <h1>My Web Development Competencies</h1>
+                    
+                    <!--HTML BOX-->
+                    <div class="col-12 col-md-4 pb-2">
+                        <div class="flip-box">
+                            <div class="flip-box-inner">
+                                <div class="flip-box-front">
+                                    <h2>Mark-Up (HTML 5)</h2>
+                                    <img id="circle" src="./MEDIA/html5.png">
+                                </div>
+                                <div class="flip-box-back text-center">
+                                    <h2>My Rating: 7/10</h2>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!--CSS BOX-->
+                    <div class="col-12 col-md-4 pb-2">
+                        <div class="flip-box">
+                            <div class="flip-box-inner">
+                                <div class="flip-box-front">
+                                    <h2>Styling (CSS)</h2>
+                                    <img id="circle" src="./MEDIA/css3.png">
+                                </div>
+                                <div class="flip-box-back text-center">
+                                    <h2>My Rating: 5/10</h2>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!--JavaScript BOX-->
+                    <div class="col-12 col-md-4 pb-2">
+                        <div class="flip-box">
+                            <div class="flip-box-inner">
+                                <div class="flip-box-front">
+                                    <h2>JavaScript</h2>
+                                    <img id="circle" src="./MEDIA/javascript.png">
+                                </div>
+                                <div class="flip-box-back text-center">
+                                    <h2>My Rating: 2/10</h2>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+
+            <!--Statement of Authenticity-->
+            <div class="container-fluid">
+                <div class="row">
+                    <section class="row-md-12 col-sm-12" style="background-color: orange; font-size: large;">
+                        <h1>Statement of Authenticity Section</h1>
+                        <p>
+                            I confirm that:<br><br>
+                            This is an original assessment and is entirely my own work.<br><br>
+                            It contains no material previously published or written by another person or myself except where
+                            due acknowledgement is made in the text.<br><br>
+                            No material which to a substantial extent, has been submitted for any other academic course, is
+                            included without acknowledgement.<br><br>
+                            Author: Zachariah Hull
+                        </p>
+                    </section>
+                </div>
+            </div>
+        </main>
+
+        <!--Footer section-->
+        <footer class="text-center text-lg-start bg-secondary bg-opacity-25 text-muted">
+            <div class="text-center p-4"> Created by: Zachariah Hull <br/>
+                Contact me at: <a href="mailto:ddang@eit.ac.nz">hullz1@student.eit.ac.nz</a>
+            </div>
+        </footer>
+    
+    <!--Embed the js file at the bottom of the html file-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
+    </body>
+</html>
