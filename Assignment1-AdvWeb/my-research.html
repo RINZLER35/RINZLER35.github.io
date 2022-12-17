@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Research Page</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+        <link href="./CSS/style.css" rel="stylesheet">
+    </head>
+
+    <!------------------------------BODY------------------------------------------------>
+    <body>
+        <!------- Header ------->
+        <header>
+            <!------------ NAV BAR ------------>
+            <nav class="navbar border border-dark border-2" style="background-color: lightgreen;">
+                <div class="container-fluid">
+                    <a class="navbar-brand" href="index.html"><img src="./MEDIA/global.png"> ITWD6.408</a>
+                    <!--NAV BAR LINKS-->
+                    <div class="navbar-expand-md" id="navbarSupportedContent">
+                        <ul class="navbar-nav me-auto mb-0 mb-lg-0">
+                            <li class="nav-item d-none d-md-block">
+                                <a class="nav-link" aria-current="page" href="index.html">HOME</a>
+                            </li>
+                            <li class="nav-item d-none d-md-block">
+                                <a class="nav-link" href="form.html">FORMS</a>
+                            </li>
+                            <li class="nav-item d-none d-md-block">
+                                <a class="nav-link" href="xml-rss.html">XML/RSS</a>
+                            </li>
+                                <li class="nav-item d-none d-md-block">
+                                <a class="nav-link" href="js-demo.html">JAVASCRIPT</a>
+                            </li>
+                            <li class="nav-item d-none d-md-block">
+                                <a class="nav-link active" href="my-research.html">RESEARCH</a>
+                            </li>
+                        </ul>    
+                    </div>
+                    <!--NAV BAR CURTAIN MENU-->
+                    <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+                        <div class="offcanvas-header">
+                            <h5 class="offcanvas-title" id="offcanvasNavbarLabel"><img src="./MEDIA/global.png"> ITWD6.408</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                        </div>
+                        <div class="offcanvas-body">
+                            <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                                <li class="nav-item">
+                                    <a class="nav-link" aria-current="page" href="index.html">HOME</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" aria-current="page" href="form.html">FORMS</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="xml-rss.html">XML/RSS</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="js-demo.html">JAVASCRIPT</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link active" href="my-research.html">RESEARCH</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+        </header>
+
+        <!------------ Main Section ------------>
+        <main>
+            <!--Container for all demos-->
+            <div class="container-fluid p-1">
+                <div class="row">
+
+
+                    <!--Copyright Box-->
+                    <div class="col-12 col-md-4">
+                        <div class="flip-box p-2">
+                            <div class="flip-box-inner">
+                                <div class="flip-box-front">
+                                    <div class="col h-25 d-flex align-items-center justify-content-center">
+                                        <h3>Copyright, Creative Common (CC) Licenses, Fair Use</h3>
+                                    </div>
+                                    <div class="w-100"></div>
+                                    <div class="col h-75">
+                                        <img src="./MEDIA/research-copyright.jpg">
+                                    </div>
+                                </div>
+                                <div class="flip-box-back" id="research">
+                                    <div class="col h-50">
+                                        <h5><u>Basic Copyright Principles</u></h5>
+                                        <ol>
+                                            <li>Work: Copyright protects the original expression of an idea rather than the idea itself.</li>
+                                            <li>Ownership: The author or creator of a work is the initial owner of the copyright.</li>
+                                            <li>Infringement: You cannot do something with that work without the owner's permission.</li>
+                                            <li>Exceptions: The Copyright Act has “user rights” that present exceptions to copyright.</li>
+                                            <li>Balance: Between the rights of creators, owners, and users.</li>
+                                        </ol>
+                                        <p>Link: <a href="https://www.ualberta.ca/the-quad/2016/11/a-brief-overview-of-copyright-5-key-concepts.html">A Brief Overview of Copyright: 5 Key Concepts</a></p>
+                                        <h5><u>Creative Commons Licenses</u></h5>
+                                    </div>
+                                    <div class="w-100"></div>
+                                    <div class="col h-50 d-flex align-items-center justify-content-center">
+                                        <img class="rounded border border-dark" style="max-width: 65%; max-height: 100%;" src="./MEDIA/CC Licenses.png">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!--Privacy Box-->
+                    <div class="col-12 col-md-4">
+                        <div class="flip-box p-2">
+                            <div class="flip-box-inner">
+                                <div class="flip-box-front">
+                                    <div class="col h-25 d-flex align-items-center justify-content-center">
+                                        <h3>Privacy and Privacy Policy</h3>
+                                    </div>
+                                    <div class="w-100"></div>
+                                    <div class="col h-75">
+                                        <img src="./MEDIA/privacy policy.jpg">
+                                    </div>
+                                </div>
+                                <div class="flip-box-back" id="research">
+                                    <h5><u>What is a Privacy Policy?</u></h5>
+                                    <p>A privacy policy is a statement or document which explains what information is collected, why it is collected, and what will be done with it. It may also explain how the information is collected.</p>
+                                    <p>Common information that is gathered is:</p>
+                                    <ul>
+                                        <li>IP Address</li>
+                                        <li>Cookies (name/password, location, browser history, preferences)</li>
+                                        <li>Computer Hardware</li>
+                                        <li>Auto Fill Data</li>
+                                    </ul>
+                                    <p>Link: <a href="https://www.theupcoming.co.uk/2021/09/23/what-type-of-data-is-collected-by-websites-tips-to-ensure-online-privacy/">Information Gathered by Websites</a></p>
+                                    <p><u>At the bottom of this page is my privacy policy...</u></p>
+                                    <p>Link: <a href="https://www.privacy.org.nz/tools/privacy-statement-generator/">Generate Privacy Policy</a></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!--SEO Box-->
+                    <div class="col-12 col-md-4">
+                        <div class="flip-box p-2">
+                            <div class="flip-box-inner">
+                                <div class="flip-box-front">
+                                    <div class="col h-25 d-flex align-items-center justify-content-center"><h3>Search Engine Optimisation (SEO)</h3></div>
+                                    <div class="w-100"></div>
+                                    <div class="col h-75"><img src="./MEDIA/SEO image.jpg"></div>
+                                </div>
+                                <div class="flip-box-back" id="research">
+                                    <h5><u>5 ways to improve Search Engine Optimisation (SEO)</u></h5>
+                                    <ol>
+                                        <li>Improve your page loading speed</li>
+                                        <li>Optimize your site for mobile devices</li>
+                                        <li>Encourage sharing on social media</li>
+                                        <li>Properly format your page</li>
+                                        <li>Use keywords appropriatly</li>
+                                    </ol>
+                                    <p>Link: <a href="https://www.quicksprout.com/ways-to-improve-seo-ranking/">11 steps to improve SEO ranking</a></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!--Publishing Box-->
+                    <div class="col-12 col-md-4">
+                        <div class="flip-box p-2">
+                            <div class="flip-box-inner">
+                                <div class="flip-box-front">
+                                    <div class="col h-25 d-flex align-items-center justify-content-center"><h3>Web Publishing</h3></div>
+                                    <div class="w-100"></div>
+                                    <div class="col h-75"><img src="./MEDIA/web hosting.jpg"></div>
+                                </div>
+                                <div class="flip-box-back" id="research">
+                                    <h5><u>3 Factors For Choosing Web Hosting</u></h5>
+                                    <ol>
+                                        <li>Server Reliability and Uptime Scores: Low reliability and server uptime causes weak connections, making your website go offline, causing loss in viewership and lowering your SEO ranking.</li>
+                                        <li>Customer Service: Going with a provider who has reliable customer support (24/7 support, in-house support department), means that when issues occur, they are resolved more effectively.</li>
+                                        <li>Availability Of Site Backups: Having a web hosting service that provides site backups, means that your website and its data is protected from incidents like server/hardware failure, as well as cyber threats.</li>
+                                    </ol>
+                                    <p>Link: <a href="https://www.forbes.com/sites/theyec/2018/02/09/seven-factors-to-consider-when-choosing-a-reliable-web-hosting-company/?sh=783419c4cab6">Factors For Choosing A Web Hosting</a></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!--Performance Box-->
+                    <div class="col-12 col-md-4">
+                        <div class="flip-box p-2">
+                            <div class="flip-box-inner">
+                                <div class="flip-box-front">
+                                    <div class="col h-25 d-flex align-items-center justify-content-center"><h3>Web Performance and Maintenance</h3></div>
+                                    <div class="w-100"></div>
+                                    <div class="col h-75"><img src="./MEDIA/web performance and maintenace.jpg"></div>
+                                </div>
+                                <div class="flip-box-back" id="research">
+                                    <h5><u>5 Ways to Reduce Page Load Times</u></h5>
+                                    <ol>
+                                        <li>Use file compression on HTML, CSS and JavaScript files</li>
+                                        <li>Minify HTML, CSS and JavaScript files (removing unecessary spaces and characters)</li>
+                                        <li>Reduce redirects (HTTP requests)</li>
+                                        <li>Optimize images</li>
+                                        <li>Leverage browser caching</li>
+                                    </ol>
+                                    <p>Link: <a href="https://moz.com/learn/seo/page-speed">Page Speed</a></p>
+
+                                    <h5><u>5 Website Maintenance Tasks</u></h5>
+                                    <ol>
+                                        <li>Make back-ups of the site</li>
+                                        <li>Test loading speed</li>
+                                        <li>Fix dead links and errors</li>
+                                        <li>Test browser compatibility</li>
+                                        <li>Check search rankings</li>
+                                    </ol>
+                                    <p>Link: <a href="https://www.gmrwebteam.com/blog/8-regular-website-maintenance-tasks-for-peak-performance">Regular Website Maintenance Tasks</a></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!--Security Box-->
+                    <div class="col-12 col-md-4">
+                        <div class="flip-box p-2">
+                            <div class="flip-box-inner">
+                                <div class="flip-box-front">
+                                    <div class="col h-25 d-flex align-items-center justify-content-center"><h3>Web Security</h3></div>
+                                    <div class="w-100"></div>
+                                    <div class="col h-75"><img src="./MEDIA/cyber security.jpg"></div>
+                                </div>
+                                <div class="flip-box-back" id="research">
+                                    <h5><u>5 Types of Cyber Attacks</u></h5>
+                                    <ol>
+                                        <li>Cross-Site Scripting</li>
+                                        <li>SQL Injection</li>
+                                        <li>Distributed Denial-of-Service attack</li>
+                                        <li>Man-in-the-Middle attack</li>
+                                        <li>Brute Force Attack</li>
+                                    </ol>
+
+                                    <h5><u>5 Preventitive Measures</u></h5>
+                                    <ol>
+                                        <li>Web Application Firewall (Cross-Site Scripting)</li>
+                                        <li>Parameterized Statements (SQL Injection)</li>
+                                        <li>Content Delivery Network (DDoS Attack)</li>
+                                        <li>Secure Sockets Layer (MitM Attack)</li>
+                                        <li>2 Factor Authentication (Brute Force Attack)</li>
+                                    </ol>
+
+                                    <p>Link: <a href="https://www.tripwire.com/state-of-security/featured/most-common-website-security-attacks-and-how-to-protect-yourself/">The 10 Most Common Website Security Attacks (and How to Protect Yourself)</a></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                </div>
+            </div>
+
+            <!--Privacy Policy Statement-->
+            <div class="container-fluid bg-warning">
+                <div class="col">
+                    <h6><u>My Privacy Policy</u></h6>
+                    <p>
+                        We collect personal information from you, including information about your:
+                        <ul>
+                            <li>name</li>
+                            <li>contact information</li>
+                        </ul>                                        
+                        We collect your personal information in order to:
+                        <ul>
+                            <li>provide analytical data to educate</li>
+                        </ul>                                        
+                        Besides our staff, we share this information with:
+                        <ul>
+                            <li>The Eastern Institute of Technology, in order to provide evidence of work completed.</li>
+                        </ul>
+                        We keep your information for 6 months at which point we securely destroy it by.
+                        
+                        You have the right to ask for a copy of any personal information we hold about you, 
+                        and to ask for it to be corrected if you think it is wrong. 
+                        If you'd like to ask for a copy of your information, or to have it corrected, please contact us 
+                        <a href = "mailto: hullz1@student.eit.ac.nz">hullz1@student.eit.ac.nz</a>
+                    </p>
+                </div>
+            </div>
+        </main>
+
+        <!--Footer section-->
+        <footer class="text-center text-lg-start bg-secondary bg-opacity-25 text-muted">
+            <div class="text-center p-4"> Created by: Zachariah Hull <br/>
+                Contact me at: <a href="mailto:ddang@eit.ac.nz">hullz1@student.eit.ac.nz</a>
+            </div>
+        </footer>
+
+        <!--Embed the js file at the bottom of the html file-->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
+        <script src="./JS/javascript.js"></script>
+    </body>
+</html>

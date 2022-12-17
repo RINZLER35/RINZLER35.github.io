@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Forms Page</title>
+		<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+	</head>
+
+	<header>
+		<nav class="navbar border border-dark border-2" style="background-color: lightgreen;">
+			<div class="container-fluid">
+				<a class="navbar-brand" href="index.html"><img src="./MEDIA/global.png"> ITWD6.408</a>
+				<!--NAV BAR LINKS-->
+				<div class="navbar-expand-md" id="navbarSupportedContent">
+					<ul class="navbar-nav me-auto mb-0 mb-lg-0">
+						<li class="nav-item d-none d-md-block">
+							<a class="nav-link" aria-current="page" href="index.html">HOME</a>
+						</li>
+						<li class="nav-item d-none d-md-block">
+							<a class="nav-link active" href="form.html">FORMS</a>
+						</li>
+						<li class="nav-item d-none d-md-block">
+							<a class="nav-link" href="xml-rss.html">XML/RSS</a>
+						</li>
+							<li class="nav-item d-none d-md-block">
+							<a class="nav-link" href="js-demo.html">JAVASCRIPT</a>
+						</li>
+						<li class="nav-item d-none d-md-block">
+							<a class="nav-link" href="my-research.html">RESEARCH</a>
+						</li>
+					</ul>    
+				</div>
+				<!--NAV BAR CURTAIN MENU-->
+				<button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
+					<span class="navbar-toggler-icon"></span>
+				</button>
+				<div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+					<div class="offcanvas-header">
+						<h5 class="offcanvas-title" id="offcanvasNavbarLabel"><img src="./MEDIA/global.png"> ITWD6.408</h5>
+						<button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+					</div>
+					<div class="offcanvas-body">
+						<ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+							<li class="nav-item">
+								<a class="nav-link" aria-current="page" href="index.html">HOME</a>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link active" aria-current="page" href="form.html">FORMS</a>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link" href="xml-rss.html">XML/RSS</a>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link" href="js-demo.html">JAVASCRIPT</a>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link" href="my-research.html">RESEARCH</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</nav>
+	</header>
+
+	<body>
+		<div class="container-fluid">
+			<div class="row">
+				<!--Button section-->
+				<div class="col-12 col-md-2">
+					<div class="container-fluid">
+						<div class="row justify-content-around">
+							<!--Button 1-->						
+							<button class="col-6 col-md-12 btn btn-primary bg-warning m-1" type="button" 
+									data-bs-toggle="collapse" data-bs-target="#button1" 
+									aria-expanded="false" aria-controls="button1">HTML FORM</button>
+							<!--Button 2-->
+							<button class="col-6 col-md-12 btn btn-primary m-1" type="button" 
+									data-bs-toggle="collapse" data-bs-target="#button2" 
+									aria-expanded="false" aria-controls="button2">GOOGLE FORM</button>	 					
+						</div>			
+					</div>			
+				</div>
+				
+				<!--Main content section-->
+				<div class="col-12 col-md-10">
+					<div class="row">
+
+						<!--My Form-->
+						<div class="col-12">
+							<div class="collapse multi-collapse show p-2" id="button1">
+								<div class="card card-body">
+									<form name="techform" action="https://danieldangs.com/itwd6408/handle_survey.php" method="post" enctype="text/plain">
+										<!--First Name-->
+										<div class="row mb-3">
+											<label for="firstName" class="col-sm-3 col-form-label">First Name</label>
+											<div class="col-sm-9">
+												<input type="text" class="form-control" id="firstName" name="fname" required placeholder="First Name">
+											</div>
+										</div>
+
+										<!--Last Name-->
+										<div class="row mb-3">
+											<label for="lastName" class="col-sm-3 col-form-label">Last Name</label>
+											<div class="col-sm-9">
+												<input type="text" class="form-control" id="lastName" name="lname" required placeholder="Last Name">
+											</div>
+										</div>
+
+										<br>
+										<h3>Address</h3>
+										<!--Address Line 1-->
+										<div class="row mb-3">
+											<label for="addressLine1" class="col-sm-3 col-form-label">Address Line 1</label>
+											<div class="col-sm-9">
+												<input type="text" class="form-control" id="addressLine1" name="addLine1" required placeholder="Address Line 1">
+											</div>
+										</div>
+
+										<!--Address Line 2-->
+										<div class="row mb-3">
+											<label for="addressLine2" class="col-sm-3 col-form-label">Address Line 2</label>
+											<div class="col-sm-9">
+												<input type="text" class="form-control" id="addressLine2" name="addLine2" placeholder="Address Line 2">
+											</div>
+										</div>
+
+										<!--Town/City-->
+										<div class="row mb-3">
+											<label for="townCity" class="col-sm-3 col-form-label">Town/City</label>
+											<div class="col-sm-9">
+												<input type="text" class="form-control" id="townCity" name="twnCty" placeholder="Town/City">
+											</div>
+										</div>
+
+										<!--Gender Radios-->
+										<fieldset class="row mb-3">
+											<legend class="col-form-label col-md-3 pt-0">Gender</legend>
+											<div class="col-sm-9">
+												<div class="form-check form-check-inline">
+													<input class="form-check-input" type="radio" name="genderRadios" id="maleRadio" value="option1">
+													<label class="form-check-label" for="maleRadio">
+														Male
+													</label>
+												</div>
+												<div class="form-check form-check-inline">
+													<input class="form-check-input" type="radio" name="genderRadios" id="femaleRadio" value="option2">
+													<label class="form-check-label" for="femaleRadio">
+														Female
+													</label>
+												</div>
+												<div class="form-check form-check-inline">
+													<input class="form-check-input" type="radio" name="genderRadios" id="otherRadio" value="option3">
+													<label class="form-check-label" for="otherRadio">
+														Other
+													</label>
+												</div>
+											</div>
+										</fieldset>
+
+										<!--Mobile Phone Type Checkboxes-->
+										<div class="row mb-3">
+											<legend class="col-form-label col-md-3 pt-0">Mobile Phone Type</legend>
+											<div class="col-md-9">
+												<div class="form-check form-check-inline">
+												<input class="form-check-input" type="checkbox" id="gridCheck1">
+												<label class="form-check-label" for="gridCheck1">
+													Windows
+												</label>
+												</div>
+												<div class="form-check form-check-inline">
+													<input class="form-check-input" type="checkbox" id="gridCheck1">
+													<label class="form-check-label" for="gridCheck1">
+													iOS
+													</label>
+												</div>
+												<div class="form-check form-check-inline">
+													<input class="form-check-input" type="checkbox" id="gridCheck1">
+													<label class="form-check-label" for="gridCheck1">
+													Android
+													</label>
+												</div>
+												<div class="form-check form-check-inline">
+													<input class="form-check-input" type="checkbox" id="gridCheck1">
+													<label class="form-check-label" for="gridCheck1">
+													Other
+													</label>
+												</div>
+											</div>
+										</div>
+
+										<!--Mobile Provider Select-->
+										<div class="form-group row">
+											<label class="col-md-3 col-form-label">Mobile Phone Provider</label>
+											<select class="col-md-9 custom-select" required="required">
+												<option selected>None</option>
+												<option value="1">Spark</option>
+												<option value="2">Vodafone</option>
+												<option value="3">2Degrees</option>
+												<option value="4">Now</option>
+												<option value="5">Other</option>
+											</select>
+										</div>
+
+										<br>
+
+										<!--Phone for study input-->
+										<div class="input-group">
+											<label class="col-md-3 col-form-label"> Do you use your phone for study? Please explain...</label>
+											<textarea class="form-control col-md-9" placeholder="Enter description..."></textarea>
+										</div>
+
+										<!--Submit and Reset-->
+										<button type="submit" class="btn btn-primary">Submit</button>
+										<button type="reset" class="btn btn-danger">Reset</button>
+									</form>
+								</div>
+							</div>
+						</div>
+					
+						<!--Google Form-->
+						<div class="col-12">
+							<div class="collapse multi-collapse p-2" id="button2">
+								<div class="card card-body">
+									<iframe src="https://docs.google.com/forms/d/e/1FAIpQLScxacdsDH3iizECjkE7kzQ30CLxN9hvBlIUiJSBMUCEJ7-2gA/viewform?embedded=true" width="640" height="1542" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+									<p>Click <a href="https://docs.google.com/spreadsheets/d/1MHWBtrv8AeTbYwuXKZ-W52syPiOpJEMKMgAmIkLvUPU/edit?usp=sharing">here</a> to view a spreadsheet of the responses.</p>
+								</div>
+							</div>
+						</div>
+					</div>				
+				</div>		
+			</div>
+		</div>
+
+		<!--Footer section-->
+		<footer class="text-center text-lg-start bg-secondary bg-opacity-25 text-muted">
+			<div class="text-center p-4"> Created by: Zachariah Hull <br/>
+				Contact me at: <a href="mailto:ddang@eit.ac.nz">hullz1@student.eit.ac.nz</a>
+			</div>
+		</footer>
+			
+		
+		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>	
+	</body>
+
+</html>
