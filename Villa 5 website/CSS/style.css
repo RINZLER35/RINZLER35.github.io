@@ -1,0 +1,110 @@
+/* Style Sheet */
+
+/* html {
+	height: 100%;
+} */
+
+#contents {
+	position: sticky;
+	top: 20px;
+}
+
+.horizontal-center {
+	display: flex; 
+    align-items: center;
+	justify-content: center;
+}
+
+.anchor-bottom {
+	position: absolute;
+	bottom: 1rem;
+	left: 1rem;
+}
+
+.nav-color {
+	background-color: rgb(234, 197, 154);
+}
+
+.bio-container {
+    height: 500px;
+}
+
+.bio-description {
+    display: flex; 
+    align-items: center;
+    font-size: medium;
+}
+
+.medium-photo {
+    width: 50%;
+    height: auto;
+}
+.acc-header {
+    background-color: orange;
+    font-weight: bold;
+}
+
+.acc-body {
+    background-color: rgb(250, 206, 125);
+}
+
+/* Inherited Style */
+
+.showcase {
+	min-height: 60vh;
+	background-color: gray;
+	vertical-align: middle;
+	position: relative;
+    border: solid black 2px;
+}
+
+.show-image img {
+	/*Background Image*/
+	/*background-image: url("../MEDIA/pad_thai_header.jpg");*/
+
+	/*Add the blur effect*/
+	filter: blur(2px);
+	-webkit-filter: blur(2px);
+
+	/*Full height*/
+	width: 100%;
+	height: 60vh;
+	object-fit: cover;
+
+    position: relative;
+
+	/*Center and scale the image nicely*/
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+.show-text {
+    background-color: rgb(0, 0, 0);
+    background-color: rgba(0, 0, 0, 0.4);
+    color: white;
+    font-weight: bold;
+    border: 3px solid #f1f1f1;
+    position: absolute;
+    left: 10%;
+    /*transform: translate(-50%, -50%);*/
+    z-index: 2;
+    width: 80%;
+    padding: 20px;
+    text-align: center;
+}
+
+.showcase .show-text {
+	position: absolute;
+	top: 50%;
+	transform: translate(0, -50%);
+}
+
+.accordion-button-style {
+	background-color: rgb(234, 197, 154);
+	font-weight: bold;
+}
+
+.accordion-description-style {
+	background-color: rgb(231, 172, 106);
+}

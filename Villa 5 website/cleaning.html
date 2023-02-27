@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Villa 5 - Cleaning</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+        <link href="./CSS/style.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    </head>
+
+    <!------------------------------ BODY ------------------------------>
+    <body>
+        <!------- Header ------->
+        <header>
+            <!------------ NAV BAR ------------>
+            <nav class="navbar border border-dark border-2 nav-color">
+                <div class="container-fluid">
+                    <a class="navbar-brand" href="index.html">Villa 5</a>
+                    <!--NAV BAR LINKS-->
+                    <div class="navbar-expand-md" id="navbarSupportedContent">
+                        <ul class="navbar-nav me-auto mb-0 mb-lg-0">
+                            <li class="nav-item d-none d-md-block">
+                                <a class="nav-link" aria-current="page" href="index.html">Home</a>
+                            </li>
+                            <li class="nav-item d-none d-md-block">
+                                <a class="nav-link active" aria-current="page" href="cleaning.html">Cleaning Schedule</a>
+                            </li>
+                            <li class="nav-item d-none d-md-block">
+                                <a class="nav-link" aria-current="page" href="rules.html">Rules</a>
+                            </li>
+                        </ul>    
+                    </div>
+                    <!--NAV BAR CURTAIN MENU-->
+                    <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+                        <div class="offcanvas-header nav-color">
+                            <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Villa 5</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                        </div>
+                        <div class="offcanvas-body">
+                            <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                                <li class="nav-item">
+                                    <a class="nav-link" aria-current="page" href="index.html">Home</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link active" aria-current="page" href="cleaning.html">Cleaning Schedule</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" aria-current="page" href="rules.html">Rules</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+        </header>
+
+        <!------------ Main Section ------------>
+        <main>
+
+            <!--Showcase Header-->
+            <section class="showcase">
+                <div class="show-image"><img src="./MEDIA/village.jpg"></div>
+
+                <div class="show-text">
+                    <h1>Villa 5</h1>
+                    <h3>Cleaning Schedule</h3>
+                </div>
+            </section>
+
+            <!--Main Content Container-->
+            <div class="container-fluid" style="background-color: rgb(224, 224, 224);">
+                <!-- Cleaning Roster and Descriptions -->
+                <div class="row p-2">
+                    
+                    <!-- Area Descriptions -->
+                    <div class="col-12 col-md-6">
+                        <h3 class="text-center">Area Descriptions</h3>
+                        <p>
+                            NOTE: These descriptions are a guideline, take it upon yourselves to do a thorough job and 
+                            clean any mess you come across, even if it is not listed here. 
+                            This list will be added to over time.
+                        </p>
+                        <p>
+                            NOTE: Seeing as we have an odd number of areas to residents, I have bundled two residents to do the kitchen 
+                            jobs as this is a frequently used area will take an extra hand to clean thoroughly. Let me know if you have 
+                            any thoughs or issues regarding this.
+                        </p>
+                        <div class="accordion" id="areaDescriptions">
+
+                            <!-- Kitchen -->
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="kitchenHeader">
+                                    <button class="accordion-button collapsed accordion-button-style" type="button" data-bs-toggle="collapse" data-bs-target="#kitchenDescription">
+                                        Kitchen
+                                    </button>
+                                </h2>
+                                <div id="kitchenDescription" class="accordion-collapse collapse" data-bs-parent="#areaDescriptions">
+                                    <div class="accordion-body accordion-description-style">
+                                        <h4>Bi-Weekly</h4>
+                                        <ul>
+                                            <li>Wipe down benchtop surfaces</li>
+                                            <li>Wipe down windowsils</li>
+                                            <li>Wipe down stovetop surfaces</li>
+                                        </ul>
+                                        <h4>Monthly</h4>
+                                        <ul>
+                                            <li>Inspect and clean out expired food from pantry and fridge (if applicable)</li>
+                                            <li>Wipe down pantry surfaces</li>
+                                            <li>Wipe down fridge surfaces</li>
+                                            <li>Clean out utensil draws</li>
+                                            <li>Clean under/behind/around applicances</li>
+                                            <li>Clean out oven</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Living Room -->
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="lRoomHeader">
+                                    <button class="accordion-button collapsed accordion-button-style" type="button" data-bs-toggle="collapse" data-bs-target="#lRoomDescription">
+                                        Living Room
+                                    </button>
+                                </h2>
+                                <div id="lRoomDescription" class="accordion-collapse collapse" data-bs-parent="#areaDescriptions">
+                                    <div class="accordion-body accordion-description-style">
+                                        <h4>Bi-Weekly</h4>
+                                        <ul>
+                                            <li>...</li>
+                                        </ul>
+                                        <h4>Monthly</h4>
+                                        <ul>
+                                            <li>Vacuum the floors</li>
+                                            <li>Dust curtains</li>
+                                            <li>Wipe down windowsils</li>
+                                            <li>Wipe down dining table</li>
+                                            <li>Clean windows</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Downstairs Bathroom -->
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="dBathroomHeader">
+                                    <button class="accordion-button collapsed accordion-button-style" type="button" data-bs-toggle="collapse" data-bs-target="#dBathroomDescription">
+                                        Downstairs Bathroom
+                                    </button>
+                                </h2>
+                                <div id="dBathroomDescription" class="accordion-collapse collapse" data-bs-parent="#areaDescriptions">
+                                    <div class="accordion-body accordion-description-style">
+                                        <h4>Bi-Weekly</h4>
+                                        <ul>
+                                            <li>Clean mirror</li>
+                                            <li>Clean toilet bowl</li>
+                                        </ul>
+                                        <h4>Monthly</h4>
+                                        <ul>
+                                            <li>Clean shower</li>
+                                            <li>Clean floors</li>
+                                            <li>Clean windowsils</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Upstairs Bathroom -->
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="uBathroomHeader">
+                                    <button class="accordion-button collapsed accordion-button-style" type="button" data-bs-toggle="collapse" data-bs-target="#uBathroomDescription">
+                                        Upstairs Bathroom
+                                    </button>
+                                </h2>
+                                <div id="uBathroomDescription" class="accordion-collapse collapse" data-bs-parent="#areaDescriptions">
+                                    <div class="accordion-body accordion-description-style">
+                                        <h4>Bi-Weekly</h4>
+                                        <ul>
+                                            <li>Clean mirror</li>
+                                            <li>Clean toilet bowl</li>
+                                        </ul>
+                                        <h4>Monthly</h4>
+                                        <ul>
+                                            <li>Clean shower</li>
+                                            <li>Clean floors</li>
+                                            <li>Clean windowsils</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Laundry -->
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="laundryHeader">
+                                    <button class="accordion-button collapsed accordion-button-style" type="button" data-bs-toggle="collapse" data-bs-target="#laundryDescription">
+                                        Laundry and Outside
+                                    </button>
+                                </h2>
+                                <div id="laundryDescription" class="accordion-collapse collapse" data-bs-parent="#areaDescriptions">
+                                    <div class="accordion-body accordion-description-style">
+                                        <h4>Bi-Weekly</h4>
+                                        <ul>
+                                            <li>Clean out washing machine</li>
+                                            <li>Clean out dryer</li>
+                                        </ul>
+                                        <h4>Monthly</h4>
+                                        <ul>
+                                            <li>Clean and organise shelves</li>
+                                            <li>Clean the floor</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Roster -->
+                    <div class="col-12 col-md-6 justify-content-center">
+                        <h3 class="text-center">Roster</h3>
+                        <p>
+                            NOTE: Jobs on the roster will cycle every 4 weeks (start date is 20/02).
+                            <br><br>
+                            On the week of cleaning, you have all week to get your assigned jobs done, so don't stress.
+                        </p>
+                        <p>
+                            <strong class="text-danger">ATTENTION: Click on the "UPDATE ROSTER" button to get the current version.</strong>
+                        </p>
+                        <button class="btn btn-success" id="updateRoster">UPDATE ROSTER</button>
+                        <p id="currentWeek">Week starting: 20/02</p>
+
+                        <!-- Jobs -->
+                        <table class="table table-striped">
+                            <thead>
+                              <tr>
+                                <th scope="col">Area</th>
+                                <th scope="col">Resident</th>
+                                <th scope="col">Bi-Weekly Jobs</th>
+                                <th scope="col">Monthly Jobs</th>
+                              </tr>
+                            </thead>
+                            <tbody>
+                              <tr>
+                                <th scope="row">Kitchen - 1</th>
+                                <td id="res-0">Zachariah</td>
+                                <td><i class="fa fa-times" style="color: red;" id="bi-check"></i></td>
+                                <td><i class="fa fa-times" style="color: red;" id="mon-check"></i></td>
+                              </tr>
+                              <tr>
+                                <th scope="row">Kitchen - 2</th>
+                                <td id="res-1">Marcus</td>
+                                <td><i class="fa fa-times" style="color: red;" id="bi-check"></i></td>
+                                <td><i class="fa fa-times" style="color: red;" id="mon-check"></i></td>
+                              </tr>
+                              <tr>
+                                <th scope="row">Living Room</th>
+                                <td id="res-2">Arun</td>
+                                <td><i class="fa fa-times" style="color: red;" id="bi-check"></i></td>
+                                <td><i class="fa fa-times" style="color: red;" id="mon-check"></i></td>
+                              </tr>
+                              <tr>
+                                <th scope="row">Downstairs Bathroom</th>
+                                <td id="res-3">Aidan</td>
+                                <td><i class="fa fa-times" style="color: red;" id="bi-check"></i></td>
+                                <td><i class="fa fa-times" style="color: red;" id="mon-check"></i></td>
+                              </tr>
+                              <tr>
+                                <th scope="row">Upstairs Bathroom</th>
+                                <td id="res-4">Ricardo</td>
+                                <td><i class="fa fa-times" style="color: red;" id="bi-check"></i></td>
+                                <td><i class="fa fa-times" style="color: red;" id="mon-check"></i></td>
+                              </tr>
+                              <tr>
+                                <th scope="row">Laundry and Outside</th>
+                                <td id="res-5">Josh</td>
+                                <td><i class="fa fa-times" style="color: red;" id="bi-check"></i></td>
+                                <td><i class="fa fa-times" style="color: red;" id="mon-check"></i></td>
+                              </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <!-- NOTE: Possibly to areas: for every 2 and 4 weeks -->
+            </div>
+        </main>
+
+        <!--Footer section-->
+        <footer class="text-center text-lg-start bg-secondary bg-opacity-25 text-muted">
+            <div class="text-center p-4"> Created by: Zachariah Hull
+                <br>
+                Contact me at: <a href="mailto:zrhull@gmail.com">zrhull@gmail.com</a>
+                <br>
+                <a href="https://github.com/RINZLER35" style="color: inherit"><i class="fa fa-github" style="font-size: 32px;"></i></a>
+            </div>
+        </footer>
+    
+    <!--Embed the js file at the bottom of the html file (for bootstrap)-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
+    <!--Insert JQuery Library-->
+    <script src="https://code.jquery.com/jquery-3.6.3.js"></script>
+    <!--Insert my Javascript-->
+    <script src="./JS/javascript.js"></script>
+    </body>
+</html>
