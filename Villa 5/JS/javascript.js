@@ -52,10 +52,7 @@ $("#updateRoster").click(function() {
     }
     //WARNING: Over time this function will become more resource hungry, as the amount of iterations increases.
 
-    console.log("Roster Index: " + rosterIndex);
-
-    //Testing function - retrieve names for DOM. Shifting reference index will be another function (based on date).
-    //  The reference index shift in this function shouldn't effect the stable value.
+    // Updates the cleaning roster with residents
     $.each(residents, function(index, value){
         
         $(`#res-${index}`).replaceWith(`<td id="res-${index}">` + residents[rosterIndex] + `</td>`);
@@ -65,21 +62,69 @@ $("#updateRoster").click(function() {
         if (rosterIndex > 5 ) {
             rosterIndex = 0;
         }
-
-        //console.log(`Job Index: ${index}. Resident Index: ${rosterIndex} - Resident: ${residents[rosterIndex]}`);
     });
 
-    //--------------Function for alternating the bi-weekly jobs--------------//
-    //Will have to take reliance off rosterIndex off as this changes monthly not weekly
+    //console.log("Month Difference: " + monthDiff);
+
+    //-------------------------------------------------------------------------//
+
+
+    //--------------Every second week is bi-weekly jobs--------------//
     if (weeks % 2 == 0) {
         $("i#bi-check").replaceWith(tick);
     } else {
         $("i#bi-check").replaceWith(cross);
     }
+    //--------------------------------------------------------------//
 
-    // if (jobIndex == 1) {
-    //     $("i#bi-check").replaceWith(tick);
+
+    //--------------Function for updating the rubbish roster--------------//
+    var rubbishCount = weeks;
+
+    while (rubbishCount > 5) {
+        rubbishCount -= 6;
+    }
+
+    $("#rubbish-res").replaceWith(`<td id="rubbish-res">` + residents[rubbishCount] + `</td>`);
+    //--------------------------------------------------------------------//
+
+    
+    //----------------------------Test----------------------------//
+    //Test to find the first week of a month and apply the monthly job check to the webpage
+    // testDate = new Date("2023-01-22");
+    // if (testDate.getDate() < 8) {
+    //     console.log("First week of the month: " + testDate.getDate());
     // } else {
-    //     $("i#bi-check").replaceWith(cross);
+    //     console.log("Not the first week: " + testDate.getDate());
     // }
-});
+    //------------------------------------------------------------//
+
+
+    //---------------------------------NOTE: IRRELEVANT CODE----------------------------------//
+    //Write check for start of the week, then add 7 days, then check if it's the same month 
+    //(i.e. see if this is the first week of the month, regardless if the week starts in that month)
+
+    // var weekEnding = new Date(weekStarting);
+    // weekEnding.setHours(weekEnding.getHours() + 144);
+    // //Week of the 1st monday of the month
+
+    // if (weekStarting.getDate() < 8) {
+    //     //First monday of the month
+    //     //Set monthly jobs to true
+    //     console.log("First monday of the month: " + weekStarting.getDate());
+    // } else {
+    //     //Second or more monday of the month
+    //     //Set monthly jobs to false
+    //     console.log("Not the first monday of the month: " + weekStarting.getDate());
+    // }
+
+    // console.log("Week start: " + weekStarting + "\nWeek ending: " + weekEnding);
+    // //Loop to set the display date to the start of the week
+    // //if (weekStarting)
+};
+
+// Set the start of the week
+setStartingWeek();
+
+// Update the roster on page load
+updateRoster();

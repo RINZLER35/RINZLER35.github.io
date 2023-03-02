@@ -219,24 +219,41 @@
                     
                     <!-- Roster -->
                     <div class="col-12 col-md-6 justify-content-center">
-                        <h3 class="text-center">Roster</h3>
+                        
+                        <!-- Rubbish roster -->
+                        <h3 class="text-center">Rubbish Roster</h3>
+                        <p>This is a roster to assigned rubssish duties to a resident for the given week.</p>
+                        <p>NOTE: The rubbish roster cycles each week.</p>
+                        <table class="table table-striped">
+                            <thead>
+                                <tr>
+                                    <th scope="col">Assigned Resident</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td id="rubbish-res">Zachariah</td>
+                                </tr>
+                            </tbody>
+                        </table>
+
+                        <!-- Cleaning Roster -->
+                        <h3 class="text-center">Cleaning Roster</h3>
                         <p>
-                            NOTE: Jobs on the roster will cycle every 4 weeks (start date is 20/02).
+                            NOTE: Jobs on the roster will cycle every month starting on 01/03.
+                            <br><br>
+                            Cleaning weeks are the first Monday of each month.
                             <br><br>
                             On the week of cleaning, you have all week to get your assigned jobs done, so don't stress.
                         </p>
-                        <p>
-                            <strong class="text-danger">ATTENTION: Click on the "UPDATE ROSTER" button to get the current version.</strong>
-                        </p>
-                        <button class="btn btn-success" id="updateRoster">UPDATE ROSTER</button>
-                        <p id="currentWeek">Week starting: 20/02</p>
+                        <p id="currentWeek">Week Starting: 20/02</p>
 
                         <!-- Jobs -->
                         <table class="table table-striped">
                             <thead>
                               <tr>
                                 <th scope="col">Area</th>
-                                <th scope="col">Resident</th>
+                                <th scope="col">Assigned Resident</th>
                                 <th scope="col">Bi-Weekly Jobs</th>
                                 <th scope="col">Monthly Jobs</th>
                               </tr>
