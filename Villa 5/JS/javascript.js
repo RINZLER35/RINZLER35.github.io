@@ -2,48 +2,58 @@
 this.cross = '<i class="fa fa-times" style="color: red;" id="bi-check"></i>';
 this.tick = '<i class="fa fa-check" style="color: green;" id="bi-check"></i>';
 this.residents = ["Zachariah", "Marcus", "Arun", "Aidan", "Ricardo", "Josh"];
-this.startDate = new Date("2023-02-20 00:00:00");
+this.startDate = new Date("2023-03-01 00:00:00");
 this.today = new Date();
-this.displayDate = new Date();
+this.weekStarting = new Date();
 
-$("#updateRoster").click(function() {
-    //--------------Function for constructing and updating current week starting--------------//
+function setStartingWeek() {
     var cont = false;
+    //Loop to find the start date of the current week (date of monday)
     while (cont == false) {
-        if (displayDate.getDay() !== 1) {
-            displayDate.setHours(-24);
+        if (weekStarting.getDay() !== 1) {
+            weekStarting.setHours(weekStarting.getHours() - 24);
         } else {
             cont = true;
         }
     }
 
+    
+    //Function for constructing and updating current week starting in DOM
+
     var currentMonth = "";
     var currentWeek = "";
 
-    if (displayDate.getMonth() < 9) {
-        currentMonth = "0" + (displayDate.getMonth() + 1);
+    if (weekStarting.getMonth() < 9) {
+        currentMonth = "0" + (weekStarting.getMonth() + 1);
     } else {
-        currentMonth = displayDate.getMonth() + 1;
+        currentMonth = weekStarting.getMonth() + 1;
     }
 
-    currentWeek = displayDate.getDate() + "/" + currentMonth;
+    currentWeek = weekStarting.getDate() + "/" + currentMonth;
 
-    $("#currentWeek").replaceWith('<p id="currentWeek">Week starting: ' + currentWeek + '</p>');
+    $("#currentWeek").replaceWith('<p id="currentWeek">Week Starting: ' + currentWeek + '</p>');
+};
 
-    //--------------Functions for updating roster and monthly check--------------//
-
-    var jobIndex = 0;
+function updateRoster() {
+    //--------------Cleaning weeks are the first monday of every month--------------//
+    
     var rosterIndex = 0;
-
+    
     //Retrieve number of days from the start date to set the roster index
     var days = Math.floor((today - startDate) / (1000 * 3600 * 24));
-    var weeks = Math.floor(days / 7);
-    console.log("Number of weeks: " + weeks);
+    var weeks = Math.floor(days / 7); // Should be consistent as weeks are always the same length
 
-    var months = Math.floor(weeks / 4);
-    console.log("Months: " + months);
+    //var months = Math.floor(weeks / 4);
 
-    for (let i = 0; i < months; i++) {
+    // Calculates month difference effectively, no lost days done through math (i.e. odd months)
+    var yearDiff = today.getFullYear() - startDate.getFullYear();
+    var monthDiff = today.getMonth() - startDate.getMonth();
+
+    if (yearDiff > 0) {
+        monthDiff = monthDiff + (yearDiff * 12);
+    }
+    
+    for (let i = 0; i < monthDiff; i++) {
         rosterIndex += 1;
         
         if (rosterIndex > 5) {
