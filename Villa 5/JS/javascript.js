@@ -1,14 +1,14 @@
-// Cross and tick classes for the bi-weekly jobs
+// Global Variables
 this.cross = '<i class="fa fa-times" style="color: red;" id="bi-check"></i>';
 this.tick = '<i class="fa fa-check" style="color: green;" id="bi-check"></i>';
 this.residents = ["Zachariah", "Marcus", "Arun", "Aidan", "Ricardo", "Josh"];
-this.startDate = new Date("2023-03-01 00:00:00");
+this.startDate = new Date("2023-03-06 00:00:00");
 this.today = new Date();
 this.weekStarting = new Date();
 
 function setStartingWeek() {
     var cont = false;
-    //Loop to find the start date of the current week (date of monday)
+    // Loop to find the start date of the current week (date of monday)
     while (cont == false) {
         if (weekStarting.getDay() !== 1) {
             weekStarting.setHours(weekStarting.getHours() - 24);
@@ -18,7 +18,7 @@ function setStartingWeek() {
     }
 
     
-    //Function for constructing and updating current week starting in DOM
+    // Function for constructing and updating current week starting in DOM
 
     var currentMonth = "";
     var currentWeek = "";
@@ -39,11 +39,11 @@ function updateRoster() {
     
     var rosterIndex = 0;
     
-    //Retrieve number of days from the start date to set the roster index
+    // Retrieve number of days from the start date to set the roster index
     var days = Math.floor((today - startDate) / (1000 * 3600 * 24));
     var weeks = Math.floor(days / 7); // Should be consistent as weeks are always the same length
 
-    //var months = Math.floor(weeks / 4);
+    // var months = Math.floor(weeks / 4);
 
     // Calculates month difference effectively, no lost days done through math (i.e. odd months)
     var yearDiff = today.getFullYear() - startDate.getFullYear();
@@ -60,7 +60,7 @@ function updateRoster() {
             rosterIndex = 0;
         }
     }
-    //WARNING: Over time this function will become more resource hungry, as the amount of iterations increases.
+    // WARNING: Over time this function will become more resource hungry, as the amount of iterations increases.
 
     // Updates the cleaning roster with residents
     $.each(residents, function(index, value){
@@ -74,8 +74,12 @@ function updateRoster() {
         }
     });
 
-    //console.log("Month Difference: " + monthDiff);
-
+    // Update Montly Jobs check
+    if (weekStarting.getDate() < 8) {
+        $("i#mon-check").replaceWith(tick);
+    } else {
+        $("i#mon-check").replaceWith(cross);
+    }
     //-------------------------------------------------------------------------//
 
 
