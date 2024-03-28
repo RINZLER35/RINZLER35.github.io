@@ -1,0 +1,78 @@
+<!-- 
+NOTE: This file does not get called.
+This file is used to store a more readable version of the header.
+Update 'header' variable in javascript.js to change the live header.
+-->
+
+<!------- Header ------->
+<!------------ NAV BAR ------------>
+<nav class="navbar sticky-top nav-color">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="index.html">
+            <img src="./MEDIA/german-flag.png" alt="logo" width="30" height="24" class="d-inline-block align-text-top">
+            Germany Guide
+        </a>
+        <!--NAV BAR LINKS-->
+        <div class="navbar-expand-md" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-0 mb-lg-0">
+                <li class="nav-item d-none d-md-block">
+                    <a class="nav-link" href="index.html">Home</a>
+                </li>
+                <li class="nav-item dropdown d-none d-md-block">
+                    <a class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-expanded="false">Getting to Germany</a>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="stages.html">Introduction</a></li>
+                        <li><hr class="dropdown-divider"></li>
+                        <li><a class="dropdown-item" href="applying.html">Applying</a></li>
+                        <li><a class="dropdown-item" href="planning.html">Planning</a></li>
+                        <li><a class="dropdown-item" href="travelling.html">Travelling</a></li>
+                        <li><a class="dropdown-item" href="arrival.html">Arrival</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item d-none d-md-block">
+                    <a class="nav-link" href="living.html">Living in Germany</a>
+                </li>
+                <li class="nav-item d-none d-md-block">
+                    <a class="nav-link" href="resources.html">Resources</a>
+                </li>
+            </ul>
+        </div>
+
+        <!--NAV BAR CURTAIN MENU-->
+        <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+            <div class="offcanvas-header nav-color">
+                <img src="./MEDIA/german-flag.png" alt="logo" width="30" height="24" class="d-inline-block align-text-top">
+                <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Germany Guide</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+            </div>
+            <div class="offcanvas-body">
+                <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-expanded="false">Getting to Germany</a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="stages.html">Introduction</a></li>
+                            <li><hr class="dropdown-divider"></li>
+                            <li><a class="dropdown-item" href="applying.html">Applying</a></li>
+                            <li><a class="dropdown-item" href="planning.html">Planning</a></li>
+                            <li><a class="dropdown-item" href="travelling.html">Travelling</a></li>
+                            <li><a class="dropdown-item" href="arrival.html">Arrival</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="living.html">Living in Germany</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="resources.html">Resources</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</nav>
+<!------- Header ------->
